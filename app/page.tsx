@@ -1,9 +1,12 @@
-import Link from "next/link";
+import Link from 'next/link';
+import React from 'react';
 
-export default function Home() {
+const PortfolioPage: React.FC = () => {
   return (
     <div>
-      Hello World. <Link href="/about">About</Link>
+    Hello World. <Link href="/about">About</Link>
     </div>
   );
-}
+};
+
+export default PortfolioPage;
