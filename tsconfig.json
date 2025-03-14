@@ -21,9 +21,16 @@
     ],
     "baseUrl": "src/",
     "paths": {
-      "@/styles/*": ["styles/*"],
-      "@/components/*": ["components/*"]
-    }
+      "@components/*": ["components/*"],
+      "@data/*": ["data/*"],
+      "@utils/*": ["utils/*"],
+      "@layouts/*": ["layouts/*"],
+      "@lib/*": ["lib/*"],
+      "@ui/*": ["app/ui*"],
+      "@hooks/*": ["hooks/*"],
+      "@constants/*": ["constants/*"]
+    },
+    "sourceMap": true
   },
   "include": [
     "next-env.d.ts",
@@ -31,6 +38,6 @@
     "**/*.tsx",
     "next.config.js",
     ".next/types/**/*.ts"
-  ],
+, "tailwind.config.js"  ],
   "exclude": ["node_modules"]
 }
