@@ -1,4 +1,4 @@
-import "./ui/globals.css";
+import { inter } from '@app/ui/fonts';
 import { ThemeProvider } from "next-themes";
 import type { Metadata } from "next";
 
@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-inter">
+      <body className={`${inter.className} antialiased`}>
         <ThemeProvider defaultTheme="light" attribute="class">
           {children}
         </ThemeProvider>
