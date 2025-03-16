@@ -17,10 +17,9 @@ export default function AboutMe() {
         <div className="text-container max-w-6xl mx-auto pt-20">
           <p
             className={twMerge(
-              'leading-loose text-2xl md:text-4xl font-semibold mx-4',
+              'leading-[3rem] text-2xl md:text-4xl font-semibold mx-4',
               'dark:text-gray-300'
             )}
-            style={{ lineHeight: '3rem' }}
           >
             {userData.about.title}. Currently working on{' '}
             <a
