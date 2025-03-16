@@ -1,12 +1,11 @@
-import Link from "next/link";
+import React from "react";
+import ContainerBlock from "@components/ContainerBlock";
+import AboutMe from "@components/AboutMe";
 
-export default function About() {
+export default function about() {
   return (
-    <>
-      <h1>About Page</h1>
-      <div>
-        Back to <Link href="/">Home</Link>
-      </div>
-    </>
+    <ContainerBlock>
+      <AboutMe />
+    </ContainerBlock>
   );
 }

@@ -1,23 +1,26 @@
-"use client";
-import Head from "next/head";
-import styles from "@styles/Home.module.css";
-import ContainerBlock from "@components/ContainerBlock";
-import FavouriteProjects from "@components/FavouriteProjects";
-import LatestCode from "@components/LatestCode";
-import Hero from "@components/Hero";
-import getLatestRepos from "@lib/getLatestRepos";
-import userData from "@constants/data";
-import { Repository } from "@lib/types";
+'use client';
+import { useEffect, useState } from 'react';
+import ContainerBlock from '@components/ContainerBlock';
+import FavouriteProjects from '@components/FavouriteProjects';
+import LatestCode from '@components/LatestCode';
+import Hero from '@components/Hero';
+import userData from '@constants/data';
+import { Repository } from 'types/repository';
+import { UserData } from 'types/user';
 
-
-const getLatestRepos = async (data: UserData, token?: string): Promise<Repository[] | undefined> => {
+const getLatestRepos = async (
+  data: UserData,
+  token?: string,
+): Promise<Repository[] | undefined> => {
   try {
-    const username = data.githubUsername;
-    const headers: HeadersInit = token ? { Authorization: `Bearer ${token}` } : {};
+    const username = data.githubUsername
+    const headers: HeadersInit = token
+      ? { Authorization: `Bearer ${token}` }
+      : {};
 
     const res = await fetch(
       `https://api.github.com/search/repositories?q=user:${username}+sort:author-date-asc`,
-      { headers }
+      { headers },
     );
 
     if (!res.ok) {
@@ -32,27 +35,27 @@ const getLatestRepos = async (data: UserData, token?: string): Promise<Repositor
   }
 };
 
-export default function Home({ repositories }: { repositories: Repository[] }) {
+export default function Home() {
+  const [repositories, setRepositories] = useState<Repository[] | undefined>([]);
+  const token = process.env.NEXT_PUBLIC_GITHUB_AUTH_TOKEN;
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const repos = await getLatestRepos(userData, token ?? '');
+      setRepositories(repos);
+    };
+
+    fetchData();
+  }, [token]);
+
   return (
     <ContainerBlock
-      title="Manu Arora - Developer, Writer, Creator"
-      description="This is a template built specifically for my blog - Creating a developer portfolio that gets you a job."
+      title='Soo Yeong Lih - Developer, Data Scientist, Data Analyst'
+      description='This is a template built specifically for my blog - Creating a developer portfolio that gets you a job.'
     >
       <Hero />
       <FavouriteProjects />
-      <LatestCode repositories={repositories} />
+      <LatestCode repositories={repositories || []} />
     </ContainerBlock>
   );
 }
-
-export const get = async () => {
-  let token = process.env.GITHUB_AUTH_TOKEN;
-
-  const repositories = await getLatestRepos(userData, token?? "");
-
-  return {
-    props: {
-      repositories,
-    },
-  };
-};

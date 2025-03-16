@@ -1,9 +1,6 @@
-import "../styles/globals.css";
+import "./ui/globals.css";
 import { ThemeProvider } from "next-themes";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Soo Yeong Lih|Software Developer & Data Scientist",
@@ -17,8 +14,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <ThemeProvider defaultTheme="dark" attribute="class">
+      <body className="font-inter">
+        <ThemeProvider defaultTheme="light" attribute="class">
           {children}
         </ThemeProvider>
       </body>
