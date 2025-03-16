@@ -1,10 +1,10 @@
-import { UserData } from "@lib/types";
+import type { UserData } from "types/user";
 
 const userData: UserData = {
     githubUsername: "MattSoo",
     name: "Soo Yeong Lih",
     designation: "Developer & Data Scientist",
-    avatarUrl: "/avatar.png",
+    avatarUrl: "../../public/avatar.png",
     email: "sooyeonglih1996@gmail.com",
     phone: "+6010-907 3698",
     address: "Kuantan, Pahang, Malaysia",
@@ -12,42 +12,42 @@ const userData: UserData = {
         {
             title: "Tailwind Master Kit",
             link: "https://tailwindmasterkit.com",
-            imgUrl: "/tmk.jpg",
+            imgUrl: "../../public/tmk.jpg",
         },
         {
             title: "PlaceholderTech",
             link: "https://placeholdertech.in",
-            imgUrl: "/placeholdertech.png",
+            imgUrl: "../../public/placeholdertech.png",
         },
         {
             title: "Portfolio",
             link: "https://manuarora.in",
-            imgUrl: "/portfolio.png",
+            imgUrl: "../../public/portfolio.png",
         },
         {
             title: "CovidRescue",
             link: "https://covidrescue.co.in",
-            imgUrl: "/covidrescue.png",
+            imgUrl: "../../public/covidrescue.png",
         },
         {
             title: "Algochurn",
             link: "https://algochurn.com",
-            imgUrl: "/algochurn.png",
+            imgUrl: "../../public/algochurn.png",
         },
         {
             title: "Playground",
             link: "https://play.placeholdertech.in",
-            imgUrl: "/playground.png",
+            imgUrl: "../../public/playground.png",
         },
         {
             title: "Feedmeback",
             link: "https://feedmeback.vercel.app",
-            imgUrl: "/feedmeback.png",
+            imgUrl: "../../public/feedmeback.png",
         },
         {
             title: "Devmedium",
             link: "https://devmedium.vercel.app",
-            imgUrl: "/devmedium.png",
+            imgUrl: "../../public/devmedium.png",
         },
     ],
     about: {
