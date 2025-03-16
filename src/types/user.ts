@@ -1,11 +1,3 @@
-export interface Repository {
-    id: number;
-    name: string;
-    html_url: string;
-    clone_url: string;
-    description: string;
-}
-
 type Project = {
     title: string;
     link: string;
@@ -19,12 +11,12 @@ type About = {
     currentProjectUrl: string;
 };
 
-type Experience = {
+export type Experience = {
     title: string;
     company: string;
+    desc: string;
     year: string;
     companyLink: string;
-    desc: string;
 };
 
 type SocialLinks = {
