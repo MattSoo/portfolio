@@ -15,7 +15,7 @@ export default function ContainerBlock({ children, ...customMeta }: ContainerBlo
   const meta = {
     title: "Soo Yeong Lih - Developer and Data Scientist",
     description: `Showcasing my projects, skills, and experience with a personal touch.`,
-    image: "/avatar.png",
+    image: "../../public/avatar.png",
     type: "website",
     date: new Date().toISOString(),
     ...customMeta,

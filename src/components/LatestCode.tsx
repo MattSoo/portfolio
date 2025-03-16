@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
-import Link from "next/link";
-import getLatestRepos from "@lib/getLatestRepos";
+import React, { useState } from "react";
 import userData from "@constants/data";
-import { Repository } from "@lib/types";
+import type { Repository } from "types/repository";
 
 export default function LatestCode({ repositories }: { repositories: Repository[] }) {
-  const [repos, setRepos] = useState(repositories);
+  const [repos] = useState(repositories);
 
   return (
     <section className="bg-[#F1F1F1] -mt-40 dark:bg-gray-900 pb-40">
