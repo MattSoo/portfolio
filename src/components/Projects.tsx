@@ -1,50 +1,55 @@
-import React from "react";
-import userData from "@constants/data";
-import type { Project } from "types/user";
+import React from 'react'
+import userData from '@constants/data'
+import type { Project } from 'types/user'
+import Image from 'next/image'
 
 export default function Projects() {
   return (
-    <section className="bg-white dark:bg-gray-800">
-      <div className="max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800">
-        <h1 className=" text-5xl md:text-9xl font-bold py-20 text-center md:text-left">
+    <section className='bg-white dark:bg-gray-800'>
+      <div className='mx-auto h-48 max-w-6xl bg-white dark:bg-gray-800'>
+        <h1 className='py-20 text-center text-5xl font-bold md:text-left md:text-9xl'>
           Projects
         </h1>
       </div>
       {/* Grid starts here */}
-      <div className="bg-[#F1F1F1] dark:bg-gray-900">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-20 pb-40">
+      <div className='bg-[#F1F1F1] dark:bg-gray-900'>
+        <div className='mx-auto grid max-w-6xl grid-cols-1 gap-8 py-20 pb-40 md:grid-cols-2'>
           {userData.projects.map((proj, idx) => (
-            <ProjectCard
-              key={idx}
-              project={proj}
-              number={`${idx + 1}`}
-            />
+            <ProjectCard key={idx} project={proj} number={`${idx + 1}`} />
           ))}
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-const ProjectCard = ({ project, number }: { project: Project; number: string }) => {
-  const { title, link, imgUrl } = project;
+const ProjectCard = ({
+  project,
+  number,
+}: {
+  project: Project
+  number: string
+}) => {
+  const { title, link, imgUrl } = project
   return (
-    <a href={link} className="w-full block shadow-2xl">
-      <div className="relative overflow-hidden">
-        <div className="h-72 object-cover">
-          <img
+    <a href={link} className='block w-full shadow-2xl'>
+      <div className='relative overflow-hidden'>
+        <div className='h-72 object-cover'>
+          <Image
+            alt='portfolio'
             src={imgUrl}
-            alt="portfolio"
-            className="transform hover:scale-125 transition duration-2000 ease-out object-cover h-full w-full"
+            width='50'
+            height='50'
+            className='h-full w-full transform object-cover transition duration-2000 ease-out hover:scale-125'
           />
         </div>
-        <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
+        <h1 className='absolute top-10 left-10 rounded-md bg-red-500 px-2 text-xl font-bold text-gray-50'>
           {title}
         </h1>
-        <h1 className="absolute bottom-10 left-10 text-gray-50 font-bold text-xl">
-          {number.length === 1 ? "0" + number : number}
+        <h1 className='absolute bottom-10 left-10 text-xl font-bold text-gray-50'>
+          {number.length === 1 ? '0' + number : number}
         </h1>
       </div>
     </a>
-  );
-};
+  )
+}
