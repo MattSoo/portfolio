@@ -14,7 +14,7 @@ A personal portfolio website built with Next.js and Tailwind CSS, using Static S
 
 ```bash
 git clone https://github.com/MattSoo/portfolio.git
-cd your-portfolio
+cd portfolio
 ```
 
 2. Install dependencies
