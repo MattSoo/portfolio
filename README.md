@@ -1,36 +1,40 @@
-# Deploying to GitHub Pages
+# Portfolio Website
 
-This example supports deploying a statically exported Next.js application to GitHub Pages.
+A personal portfolio website built with Next.js and Tailwind CSS, using Static Site Generation (SSG) for fast performance. Deployed on GitHub Pages.
 
-The `out` directory should not be ignored by version control.
+## Tech Stack
 
-## How to use
+- Framework: Next.js
+- Styling: Tailwind CSS
+- Deployment: GitHub Pages
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+## Setup & Installation  
 
-```bash
-npx create-next-app --example github-pages github-pages-app
-```
-
-```bash
-yarn create next-app --example github-pages github-pages-app
-```
+1. Clone the repository
 
 ```bash
-pnpm create next-app --example github-pages github-pages-app
+git clone https://github.com/your-username/your-portfolio.git
+cd your-portfolio
 ```
 
-### Deploy to GitHub Pages
+2. Install dependencies
 
-1.  Create a new public GitHub repository.
-2.  Edit `next.config.js` to match your GitHub repository name:
-    - Given the pattern `https://github.com/<user>/<repo>`, update your `basePath` config to `/repo`.
-3.  Push the starter code to the `main` branch.
-4.  Run the `deploy` script (e.g. `npm run deploy`) to create the `gh-pages` branch.
-5.  On GitHub, go to **Settings** > **Pages** > **Branch**, and choose `gh-pages` as the branch with the `/root` folder. Hit **Save**.
-6.  Make a change.
-7.  Run the `deploy` script again to push the changes to GitHub Pages.
+```bash
+yarn
+```
 
-Congratulations! You should have a URL like:
+3. Run locally
 
-[https://MattSoo.github.io/portfolio/](https://MattSoo.github.io/portfolio/)
+```bash
+yarn dev
+```
+
+Then open http://localhost:3000 in your browser.
+
+4. Build for production
+
+```bash
+yarn build
+yarn deploy
+```
+
