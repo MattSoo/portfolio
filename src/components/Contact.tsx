@@ -148,7 +148,7 @@ export default function Contact() {
           <form className='form flex flex-col rounded-lg bg-white p-4 md:space-y-4'>
             <label htmlFor='name' className='mx-4 text-sm text-gray-600'>
               {' '}
-              Your Name
+              Soo Yeong Lih
             </label>
             <input
               title='name'

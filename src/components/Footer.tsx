@@ -8,7 +8,7 @@ export default function Footer() {
         <div className='h-0.5 w-full bg-white dark:bg-gray-700'></div>
         <div className='mt-8 flex flex-col justify-between space-y-4 md:flex-row md:items-center md:space-y-0'>
           <div>
-            <p>&copy; Your Name. All Rights Reserved.</p>
+            <p>&copy; Soo Yeong Lih. All Rights Reserved.</p>
           </div>
           <div>
             {/* Support me by keeping this in the footer, please. :) */}
