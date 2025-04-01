@@ -20,12 +20,12 @@ export type Experience = {
 }
 
 type SocialLinks = {
-  instagram: string
-  twitter: string
-  linkedin: string
-  github: string
-  facebook: string
-  peerlist: string
+  instagram?: string
+  twitter?: string
+  linkedin?: string
+  github?: string
+  facebook?: string
+  peerlist?: string
 }
 
 export type UserData = {
@@ -41,4 +41,5 @@ export type UserData = {
   experience: Experience[]
   resumeUrl: string
   socialLinks: SocialLinks
+  skills: string[]
 }

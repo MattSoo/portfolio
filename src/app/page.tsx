@@ -1,6 +1,5 @@
 'use client'
 import { useEffect, useState } from 'react'
-import ContainerBlock from '@components/ContainerBlock'
 import FavouriteProjects from '@components/FavouriteProjects'
 import LatestCode from '@components/LatestCode'
 import Hero from '@components/Hero'
@@ -51,13 +50,10 @@ export default function Home() {
   }, [token])
 
   return (
-    <ContainerBlock
-      title='Soo Yeong Lih - Developer, Data Scientist, Data Analyst'
-      description='This is a template built specifically for my blog - Creating a developer portfolio that gets you a job.'
-    >
+    <>
       <Hero />
       <FavouriteProjects />
       <LatestCode repositories={repositories ?? []} />
-    </ContainerBlock>
+    </>
   )
 }

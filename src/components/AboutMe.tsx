@@ -105,13 +105,8 @@ export default function AboutMe() {
                 'typescript',
                 'html',
                 'css',
-                'angular',
-                'vue',
                 'git',
                 'react',
-                'firebase',
-                'mysql',
-                'mongodb',
               ].map((tech) => (
                 <Image
                   key={tech}

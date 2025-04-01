@@ -1,11 +1,26 @@
 import { inter } from '@app/ui/fonts'
-import { ThemeProvider } from 'next-themes'
+import { ThemeProvider } from "@components/theme-provider"
 import type { Metadata } from 'next'
+import { Navbar } from '@components/Navbar'
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: 'Soo Yeong Lih|Software Developer & Data Scientist',
   description:
-    'Aspiring data scientist with a passion for building efficient and scalable solutions. Explore my work, projects, and research.',
+    'Showcasing my projects, skills, and experience with a personal touch.',
+  openGraph: {
+    type: 'website',
+    url: 'https://mattsoo.github.io/portfolio/',
+    title: 'Soo Yeong Lih - Developer and Data Scientist',
+    description: 'Showcasing my projects, skills, and experience with a personal touch.',
+    images: [{ url: '/avatar.png' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Soo Yeong Lih - Developer and Data Scientist',
+    description: 'Showcasing my projects, skills, and experience with a personal touch.',
+    images: ['/avatar.png'],
+  },
 }
 
 export default function RootLayout({
@@ -14,14 +29,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang='en'>
-      <body className={`${inter.className} antialiased ignorehydrationwarning`}>
+    <html lang='en' suppressHydrationWarning>
+      <body className={`${inter.className} antialiased`}>
         <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
           enableSystem
-          attribute='class'
-          defaultTheme='system'
           disableTransitionOnChange
         >
+          <Navbar />
           {children}
         </ThemeProvider>
       </body>
