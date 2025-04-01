@@ -1,6 +1,7 @@
 import { inter } from '@app/ui/fonts'
 import { ThemeProvider } from 'next-themes'
 import type { Metadata } from 'next'
+import '@app/globals.css'
 
 export const metadata: Metadata = {
   title: 'Soo Yeong Lih|Software Developer & Data Scientist',
