@@ -1,32 +1,18 @@
-'use client'
-import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { useTheme } from 'next-themes'
-import { usePathname } from 'next/navigation'
 import { ModeToggle } from './mode-toggle'
-import userData from '@constants/data'
-import { cn } from "components/lib/utils";
 import { Logo } from './Logo'
 
 import {
   NavigationMenu,
-  NavigationMenuContent,
+  // NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
+  // NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "components/ui/navigation-menu"
 
 function Navbar() {
-  const pathname = usePathname()
-
-  const { theme, setTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
 
   return (
     <nav className="flex items-center justify-between p-4 bg-white dark:bg-gray-900 shadow-md">
