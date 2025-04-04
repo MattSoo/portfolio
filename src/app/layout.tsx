@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: 'Soo Yeong Lih|Software Developer & Data Scientist',
   description:
     'Showcasing my projects, skills, and experience with a personal touch.',
+  metadataBase: new URL("https://mattsoo.github.io/portfolio/"),
   openGraph: {
     type: 'website',
     url: 'https://mattsoo.github.io/portfolio/',

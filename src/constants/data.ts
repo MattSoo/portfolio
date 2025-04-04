@@ -7,59 +7,24 @@ const userData: UserData = {
   avatarUrl: 'avatar.png',
   email: 'sooyeonglih1996@gmail.com',
   phone: '+6010-907 3698',
-  address: 'Kuantan, Pahang, Malaysia',
+  address: 'Kuantan Pahang, Malaysia',
   projects: [
     {
-      title: 'Tailwind Master Kit',
-      link: 'https://tailwindmasterkit.com',
-      imgUrl: 'tmk.jpg',
-    },
-    {
-      title: 'PlaceholderTech',
-      link: 'https://placeholdertech.in',
-      imgUrl: 'placeholdertech.png',
-    },
-    {
       title: 'Portfolio',
-      link: 'https://manuarora.in',
+      link: 'https://github.com/MattSoo/portfolio',
       imgUrl: 'portfolio.png',
-    },
-    {
-      title: 'CovidRescue',
-      link: 'https://covidrescue.co.in',
-      imgUrl: 'covidrescue.png',
-    },
-    {
-      title: 'Algochurn',
-      link: 'https://algochurn.com',
-      imgUrl: 'algochurn.png',
-    },
-    {
-      title: 'Playground',
-      link: 'https://play.placeholdertech.in',
-      imgUrl: 'playground.png',
-    },
-    {
-      title: 'Feedmeback',
-      link: 'https://feedmeback.vercel.app',
-      imgUrl: 'feedmeback.png',
-    },
-    {
-      title: 'Devmedium',
-      link: 'https://devmedium.vercel.app',
-      imgUrl: 'devmedium.png',
     },
   ],
   about: {
-    title:
-      "I'm a software developer that loves building products and web applications that impact millions of lives",
+    title: "I'm a software developer who loves solving complex problems, building scalable applications, and continuously learning new technologies to create impactful solutions.",
     description: [
-      `I've been developing full-stack application since I was 10 years old. I didn't know what full-stack meant at that time because the term was not coined back then. I'm so out of content right now that I'm literally crying writing this text since lorem text is so 2012 now.`,
-      `After learning HTML and struggling with CSS, I came up with a brilliant idea of using bootstrap so that I don't have to style everything by myself and - for obvious reasons - if you knew bootstrap, you were cool.`,
-      `But now, I'm a legend. I've been coding in React, Angular, Vue, Svelte, Node.js, Express, Fastify, MongoDB, MySQL, Bootstrap, Tailwind, C, C++, C#, Rust, Haskell, Perl, PHP, Assembly, Logo and YouDontKnowShit programming language etc to name a few. Although I barely know the syntax (Psst, Stack overflow!), I consider myself a Ninja developer I'm laughing right now.`,
+      "My journey into programming began with self-learning C++, where I explored algorithms like binary search trees and sorting techniques. Instead of starting with frontend development, I was more interested in how different algorithms shaped software performance and efficiency.",
+      "After that, I picked up Python for AI and automation, diving into data processing and scripting. Later, I studied Java, C# with .NET, and Kotlin in school, gaining experience with both object-oriented and functional programming paradigms.",
+      "As I continued learning, I discovered Rust and was drawn to its focus on performance and memory safety. I also deepened my understanding of programming patterns, OOP, and functional programming. During an internship, I worked with the LAMP stack, strengthening my backend and database skills. More recently, I transitioned into modern full-stack development, working with React, Next.js, and Tailwind to build dynamic web applications.",
+      "Now, I enjoy tackling challenges, optimizing performance, and writing clean, maintainable code. Whether it's designing efficient architectures, developing high-performance applications, or improving existing systems, I'm always excited to push boundaries and create something impactful."
     ],
-    currentProject: 'Tailwind Master Kit',
-    currentProjectUrl: 'https://tailwindmasterkit.com',
+    currentProject: 'Portfolio',
+    currentProjectUrl: 'https://github.com/MattSoo/portfolio',
   },
   experience: [
     {
@@ -73,12 +38,11 @@ const userData: UserData = {
   resumeUrl:
     'https://drive.google.com/file/d/1MjZvW2eKwcttprQ_USkhNe8NEbebJryI/view?usp=sharing',
   socialLinks: {
-    instagram: 'https://instagram.com/maninthere',
-    twitter: 'https://twitter.com/mannupaaji',
-    linkedin: 'https://linkedin.com/in/manuarora28',
-    github: 'https://github.com/manuarora700',
+    instagram: 'https://instagram.com/',
+    twitter: 'https://twitter.com/',
+    linkedin: 'https://linkedin.com/in/',
+    github: 'https://github.com/',
     facebook: 'https://facebook.com/',
-    peerlist: 'https://peerlist.io/manuarora',
   },
   skills: [
     'React',

@@ -27,6 +27,7 @@ const getLatestRepos = async (
     }
 
     const json = await res.json()
+    console.log(json)
     return json.items?.slice(0, 6)
   } catch (err) {
     console.error(err)

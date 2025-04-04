@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 import { ModeToggle } from './mode-toggle'
 import userData from '@constants/data'
 import { cn } from "components/lib/utils";
+import { Logo } from './Logo'
 
 import {
   NavigationMenu,
@@ -30,7 +31,10 @@ function Navbar() {
   return (
     <nav className="flex items-center justify-between p-4 bg-white dark:bg-gray-900 shadow-md">
     <NavigationMenu>
-      <NavigationMenuList> 
+      <NavigationMenuList>
+        <NavigationMenuItem>
+          <Logo />
+        </NavigationMenuItem> 
         {['About', 'Projects', 'Experience', 'Contact'].map((item) => {
           const href = `/${item.toLowerCase()}`
           return (
