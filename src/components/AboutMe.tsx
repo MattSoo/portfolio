@@ -10,19 +10,6 @@ export default function AboutMe() {
           About Me.
         </h1>
       </header>
-      <article className='-mt-10 bg-[#F1F1F1] dark:bg-gray-900'>
-        <div className='text-container mx-auto max-w-6xl pt-20'>
-          <p className='mx-4 text-2xl leading-[3rem] font-semibold md:text-4xl dark:text-gray-300'>
-            {userData.about.title}. Currently working on{' '}
-            <a
-              className='rounded-md bg-red-500 px-2 py-1 text-white'
-              href={userData.about.currentProjectUrl}
-            >
-              {userData.about.currentProject} ✈️
-            </a>
-          </p>
-        </div>
-      </article>
       <div className='bg-[#F1F1F1] px-4 dark:bg-gray-900'>
         <div className='mx-auto grid max-w-6xl grid-cols-1 gap-x-20 gap-y-20 pt-20 md:grid-cols-3'>
           {/* Contact Section */}
@@ -105,13 +92,8 @@ export default function AboutMe() {
                 'typescript',
                 'html',
                 'css',
-                'angular',
-                'vue',
                 'git',
                 'react',
-                'firebase',
-                'mysql',
-                'mongodb',
               ].map((tech) => (
                 <Image
                   key={tech}
